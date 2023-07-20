@@ -1,0 +1,22 @@
+.navbarCtn {
+    height: 12vh;  
+    background-color: black;
+    color: white;
+    opacity: 80%;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+}
+
+.navbarLink {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.navbarLink:hover {
+    cursor:pointer;
+}
+
+.navbarText {
+    font-size: 1.5rem;
+}

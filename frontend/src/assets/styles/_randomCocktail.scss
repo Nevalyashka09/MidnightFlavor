@@ -1,0 +1,54 @@
+.randomCocktailCtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 2.5vh;
+}
+
+.spiritsCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.spirit {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.spirit img {
+    height: 12vh;
+    width: 25vw;
+}
+
+.spirit button {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    margin-top: -2vh;
+}
+
+.randomRecipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 35vh;
+    width: 60vw;
+    margin-top: 2.5vh;
+    background-color: black;
+    border-radius: 25px;
+    opacity: 80%;
+}
