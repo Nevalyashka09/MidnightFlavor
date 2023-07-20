@@ -11,24 +11,9 @@ function RandomCocktail() {
   const [randomCocktail, setRandomCocktail] = useState(null);
 
   useEffect(() => {
-    const fetchRandomCocktail = async () => {
-      try {
-        const response = await axios({
-          method: "GET",
-          url: "http://www.localhost:6000/api/randomCocktail",
-        });
-
-        if (response.status === 200) {
-          setRandomCocktail(response.data);
-        } else {
-          console.error("Error fetching random cocktail");
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchRandomCocktail();
+    axios.get(`http://localhost:4242/api/randomCocktail`).then((response) => {
+      setRandomCocktail(response.data[0][0]);
+    });
   }, []);
 
   return (
@@ -80,8 +65,10 @@ function RandomCocktail() {
         {randomCocktail ? (
           <>
             <h1>{randomCocktail.name}</h1>
-            <p>Ingredients: {randomCocktail.ingredients}</p>
-            <p>Method: {randomCocktail.method}</p>
+            <p>Ingredients: </p>
+            <p>{randomCocktail.ingredients}</p>
+            <p>Method: </p>
+            <p>{randomCocktail.method}</p>
           </>
         ) : (
           <p>Loading...</p>
