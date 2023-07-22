@@ -30,9 +30,13 @@ pool.getConnection().catch(() => {
 const models = {};
 
 const CocktailManager = require("./cocktailManager");
+const UserManager = require("./userManager")
 
 models.cocktail = new CocktailManager();
 models.cocktail.setDatabase(pool);
+
+models.user = new UserManager();
+models.user.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model

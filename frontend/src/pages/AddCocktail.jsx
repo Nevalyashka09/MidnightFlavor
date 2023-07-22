@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Navbar from "../components/Navbar";
+
 function AddCocktail() {
   const navigateTo = useNavigate();
 
@@ -29,45 +31,48 @@ function AddCocktail() {
   };
 
   return (
-    <div className="addCtn">
-      <form onSubmit={(e) => handleSubmit(e)} className="addCardCtn">
-        <h1>Name :</h1>
-        <input
-          className="addInput"
-          type="text"
-          placeholder="Name your cocktail"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <h1>Spirit :</h1>
-        <input
-          className="addInput"
-          type="text"
-          placeholder="Add main spirit"
-          value={spirit}
-          onChange={(e) => setSpirit(e.target.value)}
-        />
-        <h1>Ingredients : </h1>
-        <input
-          className="addInput"
-          type="text"
-          placeholder="Choose ingridients"
-          value={ingredients}
-          onChange={(e) => setIngredients(e.target.value)}
-        />
-        <h1>Method : </h1>
-        <textarea
-          className="addArea"
-          type="text"
-          placeholder="Write the method"
-          value={method}
-          onChange={(e) => setMethod(e.target.value)}
-        />
-        <button className="button" type="submit">
-          Add cocktail
-        </button>
-      </form>
-    </div>
+    <>
+      <Navbar />
+      <div className="addCtn">
+        <form onSubmit={(e) => handleSubmit(e)} className="addCardCtn">
+          <h1>Name :</h1>
+          <input
+            className="addInput"
+            type="text"
+            placeholder="Name your cocktail"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <h1>Spirit :</h1>
+          <input
+            className="addInput"
+            type="text"
+            placeholder="Add main spirit"
+            value={spirit}
+            onChange={(e) => setSpirit(e.target.value)}
+          />
+          <h1>Ingredients : </h1>
+          <input
+            className="addInput"
+            type="text"
+            placeholder="Choose ingridients"
+            value={ingredients}
+            onChange={(e) => setIngredients(e.target.value)}
+          />
+          <h1>Method : </h1>
+          <textarea
+            className="addArea"
+            type="text"
+            placeholder="Write the method"
+            value={method}
+            onChange={(e) => setMethod(e.target.value)}
+          />
+          <button className="button" type="submit">
+            Add
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 

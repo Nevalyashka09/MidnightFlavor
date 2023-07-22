@@ -16,6 +16,24 @@ const getRandomCocktail = (req, res) => {
     });
 };
 
+const getCocktailBySpirit = (req, res) => {
+  const { spirit } = req.params;
+  console.info(req.params);
+  models.cocktail
+    .findRandomCocktailBySpirit(spirit)
+    .then((cocktail) => {
+      if (!cocktail) {
+        res.sendStatus(404);
+      } else {
+        res.send(cocktail);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const getAllCocktails = (req, res) => {
   models.cocktail
     .getAllCocktails()
@@ -69,4 +87,5 @@ module.exports = {
   addCocktail,
   getAllCocktails,
   deleteCocktail,
+  getCocktailBySpirit,
 };

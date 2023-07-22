@@ -1,0 +1,39 @@
+.registerCtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+.formCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 45vh;
+    width: 60vw;
+    margin-top: 5vh;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    opacity: 80%;
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+}
+
+.input {
+    background-color: transparent;
+    color: white;
+    border: 0px;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+  }
+
+.loginLink {
+    color: white;
+}

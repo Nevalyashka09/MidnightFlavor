@@ -4,6 +4,7 @@
 @import "./assets/styles/randomCocktail";
 @import "./assets/styles/addCocktail";
 @import "./assets/styles/allCocktails";
+@import "./assets/styles/registerAndLogin.scss";
 
 *,
 *::before,
@@ -36,7 +37,8 @@ button {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  border-radius: 5px;
-  width: 25vw;
+  border-radius: 8px;
+  width: 15vw;
   height: 4vh;
+  margin-top: 1vh;
 }

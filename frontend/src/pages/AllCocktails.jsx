@@ -3,6 +3,8 @@ import axios from "axios";
 import background from "../assets/images/background.png";
 import deleteImg from "../assets/images/delete.png";
 
+import Navbar from "../components/Navbar";
+
 function AllCocktails() {
   const [cocktails, setCocktails] = useState([]);
 
@@ -33,35 +35,37 @@ function AllCocktails() {
   };
 
   return (
-    <div className="allCocktailCtn">
-      {cocktails.length === 0 ? (
-        <p>Loading...</p>
-      ) : (
-        cocktails.map((cocktail) => (
-          <div
-            key={cocktail.id}
-            className="recipeCtn"
-            style={{ backgroundImage: `url(${background})` }}
-          >
-            <h1>{cocktail.cocktail_id}</h1>
-            <h1>{cocktail.name}</h1>
-            <p>Ingredients: </p>
-            <p>{cocktail.ingredients}</p>
-            <p>Method: </p>
-            <p>{cocktail.method}</p>
-            <div className="deleteContainer">
-              <button
-                className="deleteButton"
-                type="button"
-                onClick={() => handleDelete(cocktail.cocktail_id)}
-              >
-                <img className="deleteImg" src={deleteImg} alt="" />
-              </button>
+    <>
+      <Navbar />
+      <div className="allCocktailCtn">
+        {cocktails.length === 0 ? (
+          <p>Loading...</p>
+        ) : (
+          cocktails.map((cocktail) => (
+            <div
+              key={cocktail.id}
+              className="recipeCtn"
+              style={{ backgroundImage: `url(${background})` }}
+            >
+              <h1>{cocktail.name}</h1>
+              <p>Ingredients: </p>
+              <p>{cocktail.ingredients}</p>
+              <p>Method: </p>
+              <p>{cocktail.method}</p>
+              <div className="deleteContainer">
+                <button
+                  className="deleteButton"
+                  type="button"
+                  onClick={() => handleDelete(cocktail.cocktail_id)}
+                >
+                  <img className="deleteImg" src={deleteImg} alt="" />
+                </button>
+              </div>
             </div>
-          </div>
-        ))
-      )}
-    </div>
+          ))
+        )}
+      </div>
+    </>
   );
 }
 

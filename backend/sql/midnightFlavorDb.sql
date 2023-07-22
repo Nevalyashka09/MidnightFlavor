@@ -4,7 +4,7 @@ USE `midnightFlavorDb`;
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `user_id` integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `id` integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) UNIQUE NOT NULL,
   `hashedPassword` varchar(255) NOT NULL
@@ -19,7 +19,7 @@ CREATE TABLE `cocktail` (
   `method` TEXT
 );
 
-INSERT INTO `user` (name, email, hashedPassword)
+INSERT INTO `user` (`name`, `email`, `hashedPassword`)
 VALUES 
   ('Valere', 'valerie.apert@example.com', '$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ'),
   ('Alice', 'alice.johnsie@example.com', '$argon2id$v=19$m=16,t=2,p=1$emVmemVmemZlemZ6ZnpmZQ$eSetR6KPUNAGW+q+wDadcw'),
@@ -46,4 +46,29 @@ VALUES
   ('Tom Collins', 'Gin', 'Gin, lemon juice, simple syrup, club soda', 'Shake gin, lemon juice, and syrup with ice, strain into a Collins glass with ice, top with club soda, garnish with lemon slice.'),
   ('Mint Julep', 'Whiskey', 'Whiskey, simple syrup, fresh mint leaves', 'Muddle mint leaves and syrup, add bourbon and crushed ice, stir until the glass becomes frosty, garnish with mint sprigs.'),
   ('Caipirinha', 'Cachaça', 'Cachaça, lime, sugar', 'Muddle lime and sugar in a glass, add cachaça and ice, stir well.'),
-  ('Gimlet', 'Gin', 'Gin, lime juice, simple syrup', 'Shake all ingredients with ice, strain into a chilled cocktail glass.');
+  ('Gimlet', 'Gin', 'Gin, lime juice, simple syrup', 'Shake all ingredients with ice, strain into a chilled cocktail glass.'),
+  ('Bellini', 'Prosecco', 'Prosecco, peach puree', 'Pour peach puree into a chilled champagne flute, top with Prosecco, stir gently.'),
+  ('Aperol Spritz', 'Aperol', 'Aperol, Prosecco, soda water, orange slice', 'Fill a wine glass with ice, add Aperol and Prosecco, top with soda water, garnish with orange slice.'),
+  ('Mimosa', 'Prosecco', 'Prossecco, orange juice', 'Pour orange juice into a champagne flute, top with Champagne.'),
+  ('Rossini', 'Prosecco', 'Prosecco, strawberry puree', 'Pour strawberry puree into a chilled champagne flute, top with Prosecco, stir gently.'),
+  ('French 75', 'Gin', 'Gin, lemon juice, simple syrup, Prosecco', 'Shake gin, lemon juice, and simple syrup with ice, strain into a chilled champagne flute, top with Prosecco, garnish with lemon twist.'),
+  ('Dark and Stormy', 'Rum', 'Dark rum, ginger beer, lime wedge', 'Fill a highball glass with ice, pour dark rum, top with ginger beer, garnish with a lime wedge.'),
+  ('Moscow Mule', 'Vodka', 'Vodka, ginger beer, lime juice, mint sprig', 'Fill a copper mug with ice, add vodka and lime juice, top with ginger beer, garnish with mint sprig.'),
+  ('Whiskey Sour', 'Whiskey', 'Bourbon, lemon juice, simple syrup, lemon slice', 'Shake bourbon, lemon juice, and simple syrup with ice, strain into a rocks glass with ice, garnish with lemon slice.'),
+  ('Prosecco Punch', 'Prosecco', 'Prosecco, orange juice, cranberry juice, triple sec, fresh fruit slices', 'In a punch bowl, combine Prosecco, orange juice, cranberry juice, and triple sec. Add fresh fruit slices for garnish.'),
+  ('Gin Fizz', 'Gin', 'Gin, lemon juice, simple syrup, club soda', 'Shake gin, lemon juice, and simple syrup with ice, strain into a highball glass with ice, top with club soda.'),
+  ('Prosecco Punch', 'Prosecco', 'Prosecco, orange juice, cranberry juice, triple sec, fresh fruit slices', 'In a punch bowl, combine Prosecco, orange juice, cranberry juice, and triple sec. Add fresh fruit slices for garnish.'),
+  ('Painkiller', 'Rum', 'Dark rum, coconut cream, pineapple juice, orange juice, nutmeg', 'Shake all ingredients with ice, pour into a chilled glass, garnish with freshly grated nutmeg.'),
+  ('Espresso Martini', 'Vodka', 'Vodka, coffee liqueur, freshly brewed espresso, simple syrup, coffee beans', 'Shake all ingredients with ice, strain into a chilled martini glass, garnish with coffee beans.'),
+  ('Manhattan', 'Whiskey', 'Whiskey, sweet vermouth, Angostura bitters, Maraschino cherry', 'Stir whiskey, sweet vermouth, and bitters with ice, strain into a chilled cocktail glass, garnish with a Maraschino cherry.'),
+  ('Daiquiri Sour', 'Rum', 'White rum, lemon juice, simple syrup, egg white', 'Shake all ingredients with ice, strain into a chilled cocktail glass, garnish with a lemon twist.'),
+  ('Watermelon Vodka Slush', 'Vodka', 'Vodka, watermelon chunks, lime juice, simple syrup', 'Blend all ingredients with ice until smooth, pour into a chilled glass, garnish with a watermelon slice.'),
+  ('Boulevardier', 'Whiskey', 'Bourbon, Campari, sweet vermouth', 'Stir all ingredients with ice, strain into a rocks glass with ice, garnish with an orange twist.'),
+  ('Spritz Veneziano', 'Prosecco', 'Prosecco, Aperol, soda water, orange slice', 'Fill a wine glass with ice, add Aperol and Prosecco, top with soda water, garnish with an orange slice.'),
+  ('Bramble', 'Gin', 'Gin, blackberry liqueur, lemon juice, simple syrup, blackberries', 'Fill a rocks glass with crushed ice, pour gin and blackberry liqueur, top with lemon juice and simple syrup, garnish with blackberries.'),
+  ('Tequila Sunrise', 'Tequila', 'Tequila, orange juice, grenadine, orange slice, maraschino cherry', 'Fill a highball glass with ice, pour tequila and orange juice, top with grenadine, garnish with an orange slice and a maraschino cherry.'),
+  ('Piña Colada Fizz', 'Rum', 'White rum, coconut cream, pineapple juice, soda water', 'Fill a highball glass with ice, pour rum, coconut cream, and pineapple juice, top with soda water, stir gently.'),
+  ('Black Russian', 'Vodka', 'Vodka, coffee liqueur', 'Pour vodka and coffee liqueur into a rocks glass with ice, stir gently.'),
+  ('Whiskey Smash', 'Whiskey', 'Bourbon, lemon wedges, simple syrup, fresh mint leaves', 'Muddle lemon wedges and mint leaves in a rocks glass, add bourbon and simple syrup, fill with crushed ice, stir until the glass becomes frosty, garnish with a mint sprig.'),
+  ('Fizzy Peach Bellini', 'Prosecco', 'Prosecco, peach nectar, peach schnapps', 'Pour peach nectar and peach schnapps into a champagne flute, top with Prosecco, stir gently.'),
+  ('Paloma', 'Tequila', 'Tequila, grapefruit soda, lime juice, salt', 'Rub the rim of a glass with salt, fill the glass with ice, add tequila and lime juice, top with grapefruit soda, stir gently, garnish with a lime wedge.');

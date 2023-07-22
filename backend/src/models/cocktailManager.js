@@ -18,6 +18,13 @@ class UserManager extends AbstractManager {
     );
   }
 
+  async findRandomCocktailBySpirit(spirit) {
+    return this.database.query(
+      `SELECT * FROM ${this.table} WHERE spirit = ? ORDER BY RAND() LIMIT 1`,
+      [spirit]
+    );
+  }
+
   async getAllCocktails() {
     return this.database.query(
       `SELECT * FROM ${this.table} ORDER BY cocktail_id DESC`
