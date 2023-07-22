@@ -36,7 +36,7 @@
     border: transparent;
     cursor: pointer;
     color: white;
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-top: -2vh;
 }
 
@@ -48,8 +48,17 @@
     text-align: center;
     height: 35vh;
     width: 60vw;
-    margin-top: 2.5vh;
+    margin-top: 5vh;
     background-color: black;
     border-radius: 25px;
     opacity: 80%;
+}
+
+.masqueImg {
+    position: absolute;
+    z-index: 2;
+    height: 150px;
+    width: 120px;
+    top: 75vh;
+    left: 65vw;
 }

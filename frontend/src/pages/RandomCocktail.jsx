@@ -6,6 +6,7 @@ import rum from "../assets/images/rum.png";
 import wiskey from "../assets/images/wiskey.png";
 import gin from "../assets/images/gin.png";
 import tequila from "../assets/images/tequila.png";
+import masque from "../assets/images/masque.png";
 
 function RandomCocktail() {
   const [randomCocktail, setRandomCocktail] = useState(null);
@@ -74,6 +75,7 @@ function RandomCocktail() {
           <p>Loading...</p>
         )}
       </div>
+      <img className="masqueImg" src={masque} alt="masque" />
     </div>
   );
 }

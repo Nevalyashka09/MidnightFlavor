@@ -2,6 +2,8 @@
 @import "./assets/styles/navbar";
 
 @import "./assets/styles/randomCocktail";
+@import "./assets/styles/addCocktail";
+@import "./assets/styles/allCocktails";
 
 *,
 *::before,
@@ -9,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ingrid Darling', cursive;
+  font-family: 'Mukta', sans-serif;
 }
 
 .backgroundImg {
@@ -20,13 +22,21 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 90%;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 25vw;
+  height: 4vh;
 }

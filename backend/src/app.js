@@ -4,12 +4,19 @@ const path = require("node:path");
 // create express app
 
 const express = require("express");
+const cors = require("cors");
 const { corsMiddleware } = require("./middlewares/cors");
 
 const app = express();
 
 // use some application-level middlewares
 app.use(corsMiddleware);
+
+app.use(
+  cors({
+    origin: "http://127.0.0.1:3000",
+  })
+);
 
 app.use(express.json());
 
