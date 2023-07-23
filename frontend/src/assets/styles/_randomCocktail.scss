@@ -28,7 +28,7 @@
 
 .spirit img {
     height: 12vh;
-    width: 25vw;
+    width: 22vw;
 }
 
 .spirit button {
@@ -59,6 +59,50 @@
     z-index: 2;
     height: 150px;
     width: 120px;
-    top: 75vh;
+    top: 70vh;
     left: 65vw;
 }
+
+@media screen and (min-width: $app-tablet) {
+    .spirit button {
+        margin-top: -1vh;
+        font-size: 1.8rem;
+    }
+    .randomRecipe {
+        height: 45vh;
+        margin-top: 3vh;
+        padding: 2vh 2vh 2vh 2vh;
+    }
+    .masqueImg {
+        top: 53vh;
+        left: 65vw;
+    }
+  }
+  
+  @media screen and (min-width: $app-desktop) {
+    .spiritsCtn {
+        flex-direction: row;
+        margin-bottom: 1vh;
+    }
+    .spirit img {
+        width: 10vw;
+        height: 15vh;
+    }
+
+    .spirit button {
+        margin-top: -1.5vh;
+        font-size: 1.8rem;
+    }
+
+    .randomRecipe {
+        width: 35vw;
+        height: 50vh;
+    }
+    .masqueImg {
+        top: 70vh;
+        left: 60vw;
+        height: 30vh;
+        width: 15vw;
+        rotate: 15deg;
+    }
+  }

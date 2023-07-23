@@ -35,3 +35,18 @@
     border: 0px;
     border-bottom: 1px solid white;
 }
+
+@media screen and (min-width: $app-tablet) {
+    .addCardCtn {
+        height: 65vh;
+        width: 50vh;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+    }
+  }
+
+  @media screen and (min-width: $app-desktop) {
+    .addCardCtn {
+        width: 65vh;
+    }
+  }

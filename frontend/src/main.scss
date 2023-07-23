@@ -42,3 +42,41 @@ button {
   height: 4vh;
   margin-top: 1vh;
 }
+
+@media screen and (min-width: $app-tablet) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  button {
+    font-size: 1.5rem;
+  }
+  input {
+    font-size: 1.5rem;
+  }
+  textarea {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: $app-desktop) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 1rem;
+    width: 4vw;
+    height: 4vh;
+  }
+  input {
+    font-size: 1.5rem;
+  }
+  textarea {
+    font-size: 1.5rem;
+  }
+}

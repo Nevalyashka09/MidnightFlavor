@@ -37,3 +37,16 @@ a:link {
 .loginLink {
     color: white;
 }
+
+@media screen and (min-width: $app-tablet) {
+    .formCtn {
+        height : 50vh;
+    }
+  }
+
+  @media screen and (min-width: $app-desktop) {
+    .formCtn {
+        height : 55vh;
+        width: 40vw
+    }
+  }

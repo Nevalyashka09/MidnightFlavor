@@ -38,3 +38,21 @@
     height: 2.5vh;
     position: absolute;
 }
+
+@media screen and (min-width: $app-tablet) {
+  .recipeCtn {
+    height: 45vh;
+  }
+}
+
+@media screen and (min-width: $app-desktop) {
+  .recipeCtn {
+    width: 45vw;
+    padding: 2.5vh 10vh 5vh 10vh;
+  }
+  .deleteImg{
+    height: 4vh;
+    margin-left: -7vh;
+    margin-top: 0.5vh;
+  }
+}

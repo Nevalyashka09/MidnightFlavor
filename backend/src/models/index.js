@@ -30,7 +30,7 @@ pool.getConnection().catch(() => {
 const models = {};
 
 const CocktailManager = require("./cocktailManager");
-const UserManager = require("./userManager")
+const UserManager = require("./userManager");
 
 models.cocktail = new CocktailManager();
 models.cocktail.setDatabase(pool);
