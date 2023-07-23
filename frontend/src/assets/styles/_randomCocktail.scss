@@ -1,0 +1,108 @@
+.randomCocktailCtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 2.5vh;
+}
+
+.spiritsCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.spirit {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.spirit img {
+    height: 12vh;
+    width: 22vw;
+}
+
+.spirit button {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: -2vh;
+}
+
+.randomRecipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 35vh;
+    width: 60vw;
+    margin-top: 5vh;
+    background-color: black;
+    border-radius: 25px;
+    opacity: 80%;
+}
+
+.masqueImg {
+    position: absolute;
+    z-index: 2;
+    height: 150px;
+    width: 120px;
+    top: 70vh;
+    left: 65vw;
+}
+
+@media screen and (min-width: $app-tablet) {
+    .spirit button {
+        margin-top: -1vh;
+        font-size: 1.8rem;
+    }
+    .randomRecipe {
+        height: 45vh;
+        margin-top: 3vh;
+        padding: 2vh 2vh 2vh 2vh;
+    }
+    .masqueImg {
+        top: 53vh;
+        left: 65vw;
+    }
+  }
+  
+  @media screen and (min-width: $app-desktop) {
+    .spiritsCtn {
+        flex-direction: row;
+        margin-bottom: 1vh;
+    }
+    .spirit img {
+        width: 10vw;
+        height: 15vh;
+    }
+
+    .spirit button {
+        margin-top: -1.5vh;
+        font-size: 1.8rem;
+    }
+
+    .randomRecipe {
+        width: 35vw;
+        height: 50vh;
+    }
+    .masqueImg {
+        top: 70vh;
+        left: 60vw;
+        height: 30vh;
+        width: 15vw;
+        rotate: 15deg;
+    }
+  }

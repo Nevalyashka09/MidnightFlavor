@@ -1,0 +1,58 @@
+.allCocktailCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+
+.recipeCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 35vh;
+    width: 60vw;
+    margin-top: 5vh;
+    border-radius: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.deleteContainer {
+    position: absolute;
+    top: -7px;
+    right: -12px;
+  }
+
+  .deleteButton {
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+.deleteImg{
+    height: 2.5vh;
+    position: absolute;
+}
+
+@media screen and (min-width: $app-tablet) {
+  .recipeCtn {
+    height: 45vh;
+  }
+}
+
+@media screen and (min-width: $app-desktop) {
+  .recipeCtn {
+    width: 45vw;
+    padding: 2.5vh 10vh 5vh 10vh;
+  }
+  .deleteImg{
+    height: 4vh;
+    margin-left: -7vh;
+    margin-top: 0.5vh;
+  }
+}

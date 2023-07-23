@@ -1,0 +1,82 @@
+@import "./assets/styles/variables";
+@import "./assets/styles/navbar";
+
+@import "./assets/styles/randomCocktail";
+@import "./assets/styles/addCocktail";
+@import "./assets/styles/allCocktails";
+@import "./assets/styles/registerAndLogin.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mukta', sans-serif;
+}
+
+.backgroundImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  width: 15vw;
+  height: 4vh;
+  margin-top: 1vh;
+}
+
+@media screen and (min-width: $app-tablet) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  button {
+    font-size: 1.5rem;
+  }
+  input {
+    font-size: 1.5rem;
+  }
+  textarea {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: $app-desktop) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 1rem;
+    width: 4vw;
+    height: 4vh;
+  }
+  input {
+    font-size: 1.5rem;
+  }
+  textarea {
+    font-size: 1.5rem;
+  }
+}

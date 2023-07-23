@@ -2,12 +2,23 @@ const express = require("express");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
+const { hashPassword, verifyPassword } = require("./middlewares/auth");
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+const cocktailControllers = require("./controllers/cocktailControllers");
+const userControllers = require("./controllers/userControllers");
+
+router.post("/users", hashPassword, userControllers.createUser);
+
+router.post(
+  "/login",
+  userControllers.getUserByEmailWithPasswordAndPassToNext,
+  verifyPassword
+);
+
+router.get("/allCocktails", cocktailControllers.getAllCocktails);
+router.get("/randomCocktail", cocktailControllers.getRandomCocktail);
+router.get("/randomCocktail/:spirit", cocktailControllers.getCocktailBySpirit);
+router.post("/addCocktail", cocktailControllers.addCocktail);
+router.delete("/deleteCocktail/:id", cocktailControllers.deleteCocktail);
 
 module.exports = router;

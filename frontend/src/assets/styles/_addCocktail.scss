@@ -1,0 +1,52 @@
+.addCtn {
+    display: flex;
+    justify-content: center;
+}
+
+
+.addCardCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 55vh;
+    width: 75vw;
+    margin-top: 10vh;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    opacity: 80%;
+}
+
+.addInput {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: 0px;
+    border-bottom: 1px solid white;
+    margin-top: -2vh;
+}
+
+.addArea {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: 0px;
+    border-bottom: 1px solid white;
+}
+
+@media screen and (min-width: $app-tablet) {
+    .addCardCtn {
+        height: 65vh;
+        width: 50vh;
+        padding-top: 1vh;
+        padding-bottom: 2vh;
+    }
+  }
+
+  @media screen and (min-width: $app-desktop) {
+    .addCardCtn {
+        width: 65vh;
+    }
+  }
